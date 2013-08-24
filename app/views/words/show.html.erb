@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+<!--
+<p>
+  <strong>Userid:</strong>
+  <%= @word.user_id %>
+</p>
+-->
+<p>
+  <strong>Word:</strong>
+  <%= @word.word %>
+</p>
+
+<p>
+  <strong>Translate:</strong>
+  <%= @word.translate %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @word.count %>
+</p>
+
+<p>
+  <strong>Memorize count:</strong>
+  <%= @word.memorize_count %>
+</p>
+
+<p>
+  <strong>Last memorize date:</strong>
+  <%= @word.last_memorize_date %>
+</p>
+
+<%= link_to 'Edit', edit_word_path(@word) %> |
+<%= link_to 'Back', words_path %>

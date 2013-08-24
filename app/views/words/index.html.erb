@@ -1,0 +1,37 @@
+<h1>単語一覧</h1>
+<%= will_paginate @words, renderer: BootstrapPagination::Rails ,:previous_label => t('views.input.prev_page'), :next_label => t('views.input.next_page')%>
+<table class="table">
+  <thead>
+    <tr>
+      <!--<th>Userid</th>-->
+      <th><%= t('activerecord.attributes.word.word') %></th>
+      <th><%= t('activerecord.attributes.word.translate') %></th>
+      <th><%= t('activerecord.attributes.word.count') %></th>
+      <th><%= t('activerecord.attributes.word.memorize_count') %></th>
+      <th><%= t('activerecord.attributes.word.last_memorize_date') %></th>
+      <!--<th></th>-->
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @words.each do |word| %>
+      <tr>
+        <!--<td><%= word.user_id %></td>-->
+        <td><%= word.word %></td>
+        <td><%= word.translate %></td>
+        <td><%= word.count %></td>
+        <td><%= word.memorize_count %></td>
+        <td><%= word.last_memorize_date %></td>
+        <!--<td><%= link_to 'Show', word %></td>-->
+        <td><%= link_to t('link.edit'), edit_word_path(word) %></td>
+        <td><%= link_to t('link.delete'), word, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate @words, renderer: BootstrapPagination::Rails ,:previous_label => t('views.input.prev_page'), :next_label => t('views.input.next_page') %>
+<br>
+
+<%#= link_to 'New Word', new_word_path %>

@@ -1,0 +1,44 @@
+<%= form_for(@word) do |f| %>
+  <% if @word.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@word.errors.count, "error") %> prohibited this word from being saved:</h2>
+
+      <ul>
+      <% @word.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<!--
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+-->  
+  <div class="field">
+    <%= f.label :word %><br>
+    <%= f.text_field :word %>
+  </div>
+  <div class="field">
+    <%= f.label :translate %><br>
+    <%= f.text_field :translate %>
+  </div>
+<!--  
+  <div class="field">
+    <%= f.label :count %><br>
+    <%= f.number_field :count %>
+  </div>
+  <div class="field">
+    <%= f.label :memorize_count %><br>
+    <%= f.number_field :memorize_count %>
+  </div>
+  <div class="field">
+    <%= f.label :last_memorize_date %><br>
+    <%= f.datetime_select :last_memorize_date %>
+  </div>
+-->  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

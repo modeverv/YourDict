@@ -1,0 +1,14 @@
+# プライマリアカウントキー see: https://datamarket.azure.com/account
+MS_TRANSLATOR_PRIMARY_KEY: 'xxxx'
+# クライアントID see: https://datamarket.azure.com/developer/applications/
+MS_TRANSLATOR_CLIENT_ID: 'xxxx'
+# クライアントID see: 顧客の秘密
+MS_TRANSLATOR_CLIENT_SECRET: 'xxxx'
+
+# Twiter
+TWITTERKEY: 'xxxx'
+TWITTERSECRET: 'xxxx'
+
+# Facebook
+FACEBOOKKEY: 'xxxx'
+FACEBOOKSECRET: 'xxxx'
