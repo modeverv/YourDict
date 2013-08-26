@@ -1,4 +1,4 @@
-worker_processes 3
+worker_processes 1
 
 before_fork do |server, worker|
    @sidekiq_pid ||= spawn("bundle exec sidekiq -c 2")
@@ -9,6 +9,6 @@ after_fork do |server, worker|
     config.redis = { :size => 1 }
   end
   Sidekiq.configure_server do |config|
-    config.redis = { :size => 5 }
+    config.redis = { :size => 1 }
   end
 end
