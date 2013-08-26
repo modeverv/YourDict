@@ -18,9 +18,13 @@ ja:
         word: 単語  #g
 
       word:
-        count: カウント  #g
-        memorize_count: 覚えた回数  #g
-        last_memorize_date: 覚えた日時  #g
-        translate: 訳  #g
+        count: 出現回数  #g
+        memorize_count: 記憶回数  #g
+        last_memorize_date: 最終記憶日時  #g
+        translate: 日本語訳  #g
         user: ユーザー  #g
-        word: 単語  #g
+        word: 言葉  #g
+        memorize: 記憶した？
+        edit: 編集
+        delete: 削除
+        

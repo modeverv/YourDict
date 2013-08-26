@@ -1,0 +1,7 @@
+<% if @flg  %>
+  var count = parseInt($('#m_<%= @word.id %>').html()) + 1;
+  $('#m_<%= @word.id %>').html(count);
+  $('#md_<%= @word.id %>').html('<%= l @word.last_memorize_date , :format => "%m/%d" if !@word.last_memorize_date.nil? %>');
+<% else %>
+  alert('更新失敗');
+<% end %>

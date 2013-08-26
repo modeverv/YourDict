@@ -5,7 +5,7 @@ class WordsController < ApplicationController
   # GET /words
   # GET /words.json
   def index
-    @words = current_user.word.paginate(:page => params[:page], :per_page => 10)
+    @words = current_user.word.paginate(:page => params[:page], :per_page => 100)
   end
 
   # GET /words/1
@@ -20,6 +20,20 @@ class WordsController < ApplicationController
 
   # GET /words/1/edit
   def edit
+  end
+  
+  # GET /words/1/edit
+  def memorize
+    @word = Word.find(params[:id])
+    @word.memorize_count += 1
+    @word.last_memorize_date = Time.new
+    @flg = false
+    @flg = @word.save!
+    #render :text => @word.to_yaml
+    respond_to do |format|
+      format.html { redirect_to words_url }
+      format.js 
+    end
   end
 
   # POST /words

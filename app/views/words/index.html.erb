@@ -7,26 +7,28 @@
       <th><%= t('activerecord.attributes.word.word') %></th>
       <th><%= t('activerecord.attributes.word.translate') %></th>
       <th><%= t('activerecord.attributes.word.count') %></th>
+      <th><%= t('activerecord.attributes.word.memorize') %></th>
       <th><%= t('activerecord.attributes.word.memorize_count') %></th>
       <th><%= t('activerecord.attributes.word.last_memorize_date') %></th>
       <!--<th></th>-->
-      <th></th>
-      <th></th>
+      <th><%= t('activerecord.attributes.word.edit') %></th>
+      <th><%= t('activerecord.attributes.word.delete') %></th>
     </tr>
   </thead>
 
   <tbody>
     <% @words.each do |word| %>
-      <tr>
+      <tr id='word_<%= word.id %>'>
         <!--<td><%= word.user_id %></td>-->
         <td><%= word.word %></td>
         <td><%= word.translate %></td>
         <td><%= word.count %></td>
-        <td><%= word.memorize_count %></td>
-        <td><%= word.last_memorize_date %></td>
+        <td><%= link_to t('link.memorize'), memorize_word_path(word),:remote => true ,:class => "btn btn-mini" %></td>
+        <td id='m_<%= word.id%>'><%= word.memorize_count %></td>
+        <td id='md_<%= word.id%>'><%= l word.last_memorize_date , :format => "%m/%d" if !word.last_memorize_date.nil? %></td>
         <!--<td><%= link_to 'Show', word %></td>-->
-        <td><%= link_to t('link.edit'), edit_word_path(word) %></td>
-        <td><%= link_to t('link.delete'), word, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('link.edit'), edit_word_path(word) ,:class => "btn btn-mini"%></td>
+        <td><%= link_to t('link.delete'), word, method: :delete, data: { confirm: 'Are you sure?' } ,:class => "btn btn-mini"%></td>
       </tr>
     <% end %>
   </tbody>

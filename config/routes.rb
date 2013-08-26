@@ -2,7 +2,11 @@ YourDict::Application.routes.draw do
   get "input/index"
   post "input/input"
   
-  resources :words
+  resources :words do
+    member do
+      get 'memorize' ,:to => 'words#memorize'
+    end
+  end
 
   # devise_for :users
   root :to => 'home#index'
