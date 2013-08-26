@@ -71,3 +71,6 @@ gem 'slim', ">= 1.3.0"
 
 # i18n
 gem 'i18n_generators'
+
+# heroku
+gem 'pg'
