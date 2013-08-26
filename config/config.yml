@@ -1,14 +1,14 @@
 # プライマリアカウントキー see: https://datamarket.azure.com/account
-MS_TRANSLATOR_PRIMARY_KEY: 'xxxx'
+MS_TRANSLATOR_PRIMARY_KEY: "BS8Bc8juPnvtmpyjILDD+eBl4bVR3bLNzlShyGH8sII"
 # クライアントID see: https://datamarket.azure.com/developer/applications/
-MS_TRANSLATOR_CLIENT_ID: 'xxxx'
+MS_TRANSLATOR_CLIENT_ID: "YourDict"
 # クライアントID see: 顧客の秘密
-MS_TRANSLATOR_CLIENT_SECRET: 'xxxx'
+MS_TRANSLATOR_CLIENT_SECRET: "ze/n4MOCGpe+lcCPg2SpmJAGMw1TgeyWUffuH+mcvKE="
 
 # Twiter
-TWITTERKEY: 'xxxx'
-TWITTERSECRET: 'xxxx'
+TWITTERKEY: 'IVyG7lB4Pp4wuh2SvHg'
+TWITTERSECRET: 'Aet0B4UVccMepvKqA4RV2qTAmM0npWxpW8ft5KJak'
 
 # Facebook
-FACEBOOKKEY: 'xxxx'
-FACEBOOKSECRET: 'xxxx'
+FACEBOOKKEY: '542375035816306'
+FACEBOOKSECRET: 'c615a910232fe1c6e6a497d0b925df3d'
