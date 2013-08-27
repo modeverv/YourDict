@@ -6,6 +6,12 @@ YourDict::Application.routes.draw do
     member do
       get 'memorize' ,:to => 'words#memorize'
     end
+    collection do
+      get "not_memorize" , :to => "words#not_memorize"
+      get "recent_memorize" , :to => "words#recent_memorize"
+      get "many_count" , :to => "words#many_count"
+      get "recent_add" , :to => "words#recent_add"
+    end
   end
 
   # devise_for :users

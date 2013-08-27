@@ -7,6 +7,27 @@ class WordsController < ApplicationController
   def index
     @words = current_user.word.paginate(:page => params[:page], :per_page => 100)
   end
+  
+  def not_memorize
+    @words = current_user.word.not_memorize.paginate(:page => params[:page], :per_page => 100)
+    render "index"
+  end
+  
+  def recent_memorize
+    @words = current_user.word.memorize.recent_memorize.paginate(:page => params[:page], :per_page => 100)
+    render "index"
+  end
+  
+  def many_count
+    @words = current_user.word.many_count.paginate(:page => params[:page], :per_page => 100)
+    render "index"
+  end
+  
+  def recent_add
+    @words = current_user.word.recent_add.paginate(:page => params[:page], :per_page => 100)
+    render "index"
+  end
+  
 
   # GET /words/1
   # GET /words/1.json
